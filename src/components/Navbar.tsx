@@ -27,14 +27,12 @@ export default function Navbar() {
   return (
     <nav className="flex bg-[#067ADD] rounded-full w-full lg:w-3/4 py-3 justify-evenly items-center">
       {NavItems.map((nav) => (
-        <>
-          <Link key={nav.label} href={nav.href}>
-            <span className={`${pathname == nav.href ? "text-white hover:text-[#31A2FF]" : "text-[#31A2FF] hover:text-white"} font-semibold flex gap-1  uppercase`}>
-              {nav.label}
-              {nav.subItem && <ChevronDown />}
-            </span>
-          </Link>
-        </>
+        <Link key={nav.label} href={nav.href}>
+          <span className={`${pathname == nav.href ? "text-white hover:text-[#31A2FF]" : "text-[#31A2FF] hover:text-white"} font-semibold flex gap-1  uppercase text-2xl`}>
+            {nav.label}
+            {nav.subItem && <ChevronDown />}
+          </span>
+        </Link>
       ))}
     </nav>
   );
