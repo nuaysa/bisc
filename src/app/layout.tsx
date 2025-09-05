@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Dongle } from "next/font/google";
 import "./globals.css";
 
-const poppins = Poppins({
-  weight: ["300", "400", "600", "700"],
+const dongle = Dongle({
+  weight: ["300", "400", "700"],
   subsets: ["latin"],
-  variable: "--font-poppins",
+  variable: "--font-dongle",
   display: "swap",
 });
 
@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-       className={`${poppins.className} antialiased`}
+       className={`${dongle.className} antialiased`}
       >
         {children}
       </body>
